@@ -71,12 +71,7 @@ logo = Image.open(caminho_imagem)
 
 col1, col2, col3 = st.columns(3)
 with col2:
-    st.image(logo, use_container_width=True)
-
-st.markdown(
-    "<h2 style='text-align: center; color: black; font-weight: bold;'>MLS Analysis</h2>",
-    unsafe_allow_html=True,
-)
+    st.image(logo, use_container_width=150)
 
 @st.cache_data
 def carregar_dados():
@@ -101,7 +96,11 @@ def resetar_filtros():
 
 def montar_sidebar(df):
     """Cria os filtros da barra lateral e retorna as escolhas do usuário."""
-    st.sidebar.title("⚽ MLS Analysis")
+    st.sidebar.image(logo, use_container_width=130)
+    st.sidebar.markdown(
+    "<h2 style='text-align: center; color: black; font-weight: bold;'>MLS Analysis</h2>",
+    unsafe_allow_html=True,
+    )
     st.sidebar.caption("Análise de jogadores da MLS com base em dados do FBref.")
     st.sidebar.header("Filtros")
 

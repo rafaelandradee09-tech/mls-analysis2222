@@ -64,11 +64,15 @@ CAMINHO_DADOS_PROCESSADOS = "data/processed/mls_players_processed.csv"
 URL_REPOSITORIO = "https://github.com/rafaelandradee09-tech/mls-analysis.git"
 diretorio_app = os.path.dirname(os.path.abspath(__file__))
 caminho_imagem = os.path.join(
-    diretorio_app, "..", "data", "raw", "logo-mls-256.png"
+    diretorio_app, "..", "data", "raw", "usa_mls_64x64"
+)
+caminho_imagem2 = os.path.join(
+    diretorio_app, "..", "data", "raw", "usa_mls_128x128"
 )
 
-logo = Image.open(caminho_imagem)
 
+logo = Image.open(caminho_imagem)
+logo2 = Image.open(caminho_imagem2)
 col1, col2, col3 = st.columns(3)
 with col2:
     st.image(logo, use_container_width=40)
@@ -96,7 +100,7 @@ def resetar_filtros():
 
 def montar_sidebar(df):
     """Cria os filtros da barra lateral e retorna as escolhas do usuário."""
-    st.sidebar.image(logo, use_container_width=35)
+    st.sidebar.image(logo2, use_container_width=35)
     st.sidebar.markdown(
     "<h2 style='text-align: center; color: white; font-weight: bold;'>MLS Analysis</h2>",
     unsafe_allow_html=True,

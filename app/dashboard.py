@@ -69,7 +69,7 @@ caminho_imagem = os.path.join(
 
 logo = Image.open(caminho_imagem)
 
-col1, col2, col3 = st.columns()
+col1, col2, col3 = st.columns(3)
 with col2:
     st.image(logo, use_container_width=True)
 

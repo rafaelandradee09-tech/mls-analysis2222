@@ -62,7 +62,11 @@ from src.similarity import find_similar_players
 
 CAMINHO_DADOS_PROCESSADOS = "data/processed/mls_players_processed.csv"
 URL_REPOSITORIO = "https://github.com/rafaelandradee09-tech/mls-analysis.git"
-logo = Image.open("logo-mls-256.png")
+diretorio_app = os.path.dirname(os.path.abspath(__file__))
+caminho_imagem = os.path.join(
+    diretorio_app, "..", "data", "raw", "logo-mls-256.png"
+
+logo = Image.open(caminho_imagem)
 
 col1, col2, col3 = st.columns()
 with col2:

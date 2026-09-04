@@ -65,6 +65,7 @@ URL_REPOSITORIO = "https://github.com/rafaelandradee09-tech/mls-analysis.git"
 diretorio_app = os.path.dirname(os.path.abspath(__file__))
 caminho_imagem = os.path.join(
     diretorio_app, "..", "data", "raw", "logo-mls-256.png"
+)
 
 logo = Image.open(caminho_imagem)
 

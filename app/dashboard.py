@@ -30,6 +30,8 @@ import sys
 import pandas as pd
 import streamlit as st
 
+from PIL import Image
+
 # Permite importar os módulos de "src" mesmo quando o Streamlit executa
 # este arquivo de dentro da pasta "app".
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -59,10 +61,17 @@ from src.data_cleaning import filter_by_minutes
 from src.similarity import find_similar_players
 
 CAMINHO_DADOS_PROCESSADOS = "data/processed/mls_players_processed.csv"
-URL_REPOSITORIO = "https://github.com/rafaelandradee09-tech/football-data-analysis"
+URL_REPOSITORIO = "https://github.com/rafaelandradee09-tech/mls-analysis.git"
+logo = Image.open("logo-mls-256.png")
 
-st.set_page_config(page_title="MLS Football Data Analysis", page_icon="⚽", layout="wide")
+col1, col2, col3 = st.columns()
+with col2:
+    st.image(logo, use_container_width=True)
 
+st.markdown(
+    "<h2 style='text-align: center; color: black; font-weight: bold;'>MLS Analysis</h2>",
+    unsafe_allow_html=True,
+)
 
 @st.cache_data
 def carregar_dados():

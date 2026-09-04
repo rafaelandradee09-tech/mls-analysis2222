@@ -64,10 +64,10 @@ CAMINHO_DADOS_PROCESSADOS = "data/processed/mls_players_processed.csv"
 URL_REPOSITORIO = "https://github.com/rafaelandradee09-tech/mls-analysis.git"
 diretorio_app = os.path.dirname(os.path.abspath(__file__))
 caminho_imagem = os.path.join(
-    diretorio_app, "..", "data", "raw", "usa_mls_64x64"
+    diretorio_app, "..", "data", "raw", "usa_mls_64x64.png"
 )
 caminho_imagem2 = os.path.join(
-    diretorio_app, "..", "data", "raw", "usa_mls_128x128"
+    diretorio_app, "..", "data", "raw", "usa_mls_128x128.png"
 )
 
 
